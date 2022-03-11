@@ -7,15 +7,17 @@ This is often useful in keyword extraction based algorithms.
 
 ## Usage
 
-You can use two functions in `nominalize.py`, which are:
+import nounification.nominalize as nm
+
+print(nm.nounify_tag("elect", "VV"))
 
 1. **Nominalization based on the given tag**
 
-`print(nounify_tag("elect", "VV"))` would give you `election`
+`print(nm.nounify_tag("elect", "VV"))` would give you `election`
 
 2. **Nominalization based on the given context**
 
-`print(nounify_context("russian", "He is Russian."))` would give you `russia`
+`print(nm.nounify_context("russian", "He is Russian."))` would give you `russia`
 
 ## Requirements
 

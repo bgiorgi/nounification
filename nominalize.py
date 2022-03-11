@@ -1,4 +1,4 @@
-from lemmatize import *
+from .lemmatize import *
 import re
 
 def nounify_tag(word, tag):
@@ -46,3 +46,4 @@ def nounify_context(word, sentence):
 
 # print(nounify_tag("elect", "VV"))
 # print(nounify_context("russian", "Nick is Russian"))
+

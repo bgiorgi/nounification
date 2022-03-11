@@ -1,17 +1,19 @@
 ##################################
 ## Author: Pranav ################
 ##################################
-
-
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nltk.corpus import wordnet as wn
 from nltk import FreqDist
 from nltk.stem import WordNetLemmatizer
 from nltk import sent_tokenize, word_tokenize, pos_tag
 from collections import Counter
 import pickle
+import os
 
 # load the frequency dictionary
-with open('freqdict.pkl', 'rb') as freqdict:
+with open(os.path.dirname(__file__)+'/freqdict.pkl', 'rb') as freqdict:
     frequency_dict = pickle.load(freqdict)
 
 WN_NOUN = 'n'
